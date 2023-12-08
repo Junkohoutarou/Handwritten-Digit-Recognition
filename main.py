@@ -4,7 +4,7 @@ import pickle as pkl
 import numpy as np
 
 
-st.title('Pneumonia prediction based on chest X-Ray image')
+st.title('Handwritten')
 
 input = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input)
