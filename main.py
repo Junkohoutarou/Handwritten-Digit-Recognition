@@ -15,3 +15,8 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption='Test image')
 
+    if st.button('Predict'):
+        image = image.resize((8*8, 1))
+        feature_vector = np.array(image)
+        label = str((model.predict(feature_vector))[0])
+
