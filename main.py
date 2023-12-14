@@ -20,3 +20,5 @@ if uploaded_file is not None:
         feature_vector = np.array(image)
         label = str((model.predict(feature_vector))[0])
 
+        st.header('Result')
+        st.text(label)
