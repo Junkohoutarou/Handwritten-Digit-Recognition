@@ -4,7 +4,7 @@ import pickle as pkl
 import numpy as np
 
 st.title('Handwritten Digit Recognition')
- with open("styles.css") as f:
+with open("styles.css") as f:
     custom_css = f.read()
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 
