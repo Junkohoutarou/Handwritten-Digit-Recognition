@@ -16,8 +16,10 @@ if uploaded_file is not None:
     st.image(image, caption='Test image')
 
     if st.button('Predict'):
-        image = image.resize((8*8, 1))
-        feature_vector = np.array(image)
+        # Chuyển đổi ảnh thành ảnh đen trắng và resize
+        image = image.convert('L').resize((8, 8))
+        # Chuyển đổi ảnh thành mảng numpy
+        feature_vector = np.array(image).reshape(1, -1)
         label = str((model.predict(feature_vector))[0])
 
         st.header('Result')
