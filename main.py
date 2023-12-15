@@ -3,6 +3,9 @@ from PIL import Image
 import pickle as pkl
 import numpy as np
 
+with open("styles.css") as f:
+    custom_css = f.read()
+st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 st.title('Handwritten Digit Recognition')
 
 input = open('lrc_mnist.pkl', 'rb')
