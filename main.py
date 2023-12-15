@@ -8,6 +8,7 @@ with open("styles.css") as f:
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 st.title('Handwritten Digit Recognition')
 
+st.image("image.gif", use_column_width=True)
 input = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input)
 
